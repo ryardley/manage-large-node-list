@@ -2,17 +2,17 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Counter} from "../src/Counter.sol";
+import {CiphernodeManager} from "../src/CiphernodeManager.sol";
 
 contract CounterScript is Script {
-    Counter public counter;
+    CiphernodeManager public ctr;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        counter = new Counter();
+        ctr = new CiphernodeManager();
 
         vm.stopBroadcast();
     }
